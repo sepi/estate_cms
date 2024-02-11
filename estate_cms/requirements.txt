@@ -21,6 +21,7 @@ django==5.0.2
     #   django-cms
     #   django-entangled
     #   django-filer
+    #   django-fontawesome-5
     #   django-formtools
     #   django-parler
     #   django-polymorphic
@@ -49,6 +50,8 @@ django-entangled==0.5.4
     # via djangocms-frontend
 django-filer==3.1.1
     # via djangocms-frontend
+django-fontawesome-5==1.0.18
+    # via -r requirements.in
 django-formtools==2.5.1
     # via django-cms
 django-fsm==2.8.1

@@ -82,8 +82,10 @@ INSTALLED_APPS = [
     'djangocms_frontend.contrib.utilities',
 
     'ordered_model',
+    'fontawesome_5',
     
     'estateobjects',
+    'cms_estateobjects_integration',
 ]
 
 MIDDLEWARE = [
@@ -179,7 +181,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = False
 USE_L10N = False
-USE_THOUSAND_SEPARATOR = True
+USE_THOUSAND_SEPARATOR = False
 
 USE_TZ = True
 
@@ -240,3 +242,14 @@ INTERNAL_IPS = [
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = str(BASE_DIR.parent / "media")
+
+CMS_SIDEFRAME_ENABLED = False
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'default': {
+            'size': (600,400),
+            'crop': 'intelligent'
+        },
+    },
+}

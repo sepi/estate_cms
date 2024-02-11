@@ -3,3 +3,4 @@ djangocms-frontend[cms-4]
 djangocms-versioning
 djangocms-alias
 django-ordered-model
+django-fontawesome-5

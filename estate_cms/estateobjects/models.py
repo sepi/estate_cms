@@ -101,6 +101,18 @@ class EstateObject(OrderedModel):
     
     object_state = models.CharField(blank=True, max_length=2, choices=State)
 
+    def image_main(self):
+        first = self.image_set.first()
+        if first:
+            print('first', first.image)
+            return first.image
+
+    def images(self):
+        return [i.image for i in self.image_set.all()]
+
+    def available(self):
+        return self.reserved_for is None
+    
     def __str__(self):
         if self.creation_year:
             return f'[{self.collection_id}] {self.creation_year} {self.title}'
