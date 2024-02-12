@@ -1,11 +1,11 @@
 {% load thumbnail static fontawesome_5 %}
 
-  {% fontawesome_5_static %} 
+{% fontawesome_5_static %} 
 
 <div class="row imagerow row-cols-lg-4">
 {% for item in object_list %}
-  <div class="col">
-    <div class="card h-100" style="margin-bottom: 10px;">
+  <div class="col mb-4">
+    <div class="card h-100">
       <a href={% url 'estateobjects:detail' item.id %}>
 	{% if item.image_main %}
 	<img src="{% thumbnail item.image_main 300x300 crop subject_location=item.image_main.subject_location %}" class="card-img-top" alt="orchid image">
@@ -19,7 +19,10 @@
 	<p class="card-text taxon-name">{{ item.description }}</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item text-muted">{% if item.available %}{% fa5_icon 'check' 'fa' %} available{% else %}{% fa5_icon 'lock' 'fa' %} taken{% endif %}</li>
+        <li class="list-group-item d-flex justify-content-between align-middle">
+	  <span class="text-muted align-middle">{% if item.available %}{% fa5_icon 'check' 'fa' %} available{% else %}{% fa5_icon 'lock' 'fa' %} not available{% endif %}</span>
+	  <a class="btn btn-sm btn-outline-success {% if not item.available %}disabled{% endif %}">Place bid</a>
+	</li>
       </ul>
     </div>
   </div>
