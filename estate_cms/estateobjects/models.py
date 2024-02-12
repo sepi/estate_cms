@@ -112,6 +112,17 @@ class EstateObject(OrderedModel):
 
     def available(self):
         return self.reserved_for is None
+
+    def characterisation_str(self):
+        return ", ".join(filter(lambda x: x != '' and x != 'State: ',
+                                [self.get_object_type_display(),
+                                 self.get_object_material_display(),
+                                 "State: "+self.get_object_state_display()]))
+
+    def dimension_str(self):
+        return ", ".join(map(lambda what, val: f"{what}: {val} cm",
+                             ["W", "H", "D"],
+                             [self.width_cm, self.height_cm, self.depth_cm]))
     
     def __str__(self):
         if self.creation_year:
