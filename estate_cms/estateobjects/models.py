@@ -1,4 +1,5 @@
-# from django.db import models
+import calendar
+
 from django.contrib.gis.db import models
 from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator 
@@ -104,8 +105,9 @@ class EstateObject(OrderedModel):
     def image_main(self):
         first = self.image_set.first()
         if first:
-            print('first', first.image)
             return first.image
+        else:
+            return None
 
     def images(self):
         return [i.image for i in self.image_set.all()]
@@ -123,10 +125,17 @@ class EstateObject(OrderedModel):
         return ", ".join(map(lambda what, val: f"{what}: {val} cm",
                              ["W", "H", "D"],
                              [self.width_cm, self.height_cm, self.depth_cm]))
+
+    def creation_date_str(self):
+        if self.creation_month and self.creation_year:
+            return f", {calendar.month_name[self.creation_month]} {self.creation_year}"
+        elif self.creation_year:
+            return f", {self.creation_year}"
+        else:
+            return ""
     
     def __str__(self):
         if self.creation_year:
             return f'[{self.collection_id}] {self.creation_year} {self.title}'
         else:
             return f'[{self.collection_id}] {self.title}'
-

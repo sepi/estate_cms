@@ -174,13 +174,39 @@ LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
     ("en", _("English")),
+    ("fr", _("Français")),
     # Add additional languages here
 ]
 
+CMS_LANGUAGES = {
+    1: [
+        {
+            'code': 'en',
+            'name': _('English'),
+            'public': True,
+            'hide_untranslated': True,
+            'redirect_on_fallback': False,
+        },
+        {
+            'code': 'fr',
+            'name': _('French'),
+            'public': True,
+            'hide_untranslated': True,
+            'redirect_on_fallback': False,
+        },
+    ],
+    'default': {
+        'fallbacks': ['en', 'fr'],
+        'redirect_on_fallback':True,
+        'public': True,
+        'hide_untranslated': True,
+    }
+}
+
 TIME_ZONE = 'UTC'
 
-USE_I18N = False
-USE_L10N = False
+USE_I18N = True
+USE_L10N = True
 USE_THOUSAND_SEPARATOR = False
 
 USE_TZ = True

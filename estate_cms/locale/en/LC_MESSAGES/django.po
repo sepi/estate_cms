@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-13 06:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: cms_estateobjects_integration/cms_toolbars.py:15
+msgid "Estate objects"
+msgstr ""
+
+#: cms_estateobjects_integration/cms_toolbars.py:19
+msgid "Bids"
+msgstr ""
+
+#: cms_estateobjects_integration/cms_toolbars.py:23
+msgid "Contacts"
+msgstr ""
+
+#: cms_estateobjects_integration/cms_toolbars.py:27
+msgid "Stores"
+msgstr ""
+
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:23
+#: estateobjects/templates/estateobjects/estateobject_detail.html:57
+msgid "available"
+msgstr ""
+
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:23
+#: estateobjects/templates/estateobjects/estateobject_detail.html:57
+msgid "not available"
+msgstr ""
+
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
+#: estateobjects/templates/estateobjects/estateobject_detail.html:64
+#: estateobjects/templates/estateobjects/estateobject_detail.html:74
+msgid "I'm interested"
+msgstr ""
+
+#: estate_cms/settings.py:176 estate_cms/settings.py:185
+msgid "English"
+msgstr ""
+
+#: estate_cms/settings.py:177
+msgid "Français"
+msgstr ""
+
+#: estate_cms/settings.py:192
+msgid "French"
+msgstr ""
+
+#: estate_cms/settings.py:238
+msgid "Standard"
+msgstr ""
+
+#: estateobjects/cms_plugins.py:10
+msgid "Estate Objects"
+msgstr ""
+
+#: estateobjects/cms_plugins.py:11
+msgid "Estate Object List"
+msgstr ""
+
+#: estateobjects/models.py:25
+msgid "Box"
+msgstr ""
+
+#: estateobjects/models.py:26
+msgid "Room"
+msgstr ""
+
+#: estateobjects/models.py:27
+msgid "Building"
+msgstr ""
+
+#: estateobjects/models.py:28
+msgid "Outside"
+msgstr ""
+
+#: estateobjects/models.py:80
+msgid "Sculpture"
+msgstr ""
+
+#: estateobjects/models.py:81
+msgid "Painting"
+msgstr ""
+
+#: estateobjects/models.py:82
+msgid "Drawing"
+msgstr ""
+
+#: estateobjects/models.py:83 estateobjects/models.py:93
+msgid "Other"
+msgstr ""
+
+#: estateobjects/models.py:88
+msgid "Steel"
+msgstr ""
+
+#: estateobjects/models.py:89
+msgid "Bronze"
+msgstr ""
+
+#: estateobjects/models.py:90
+msgid "Wood"
+msgstr ""
+
+#: estateobjects/models.py:91
+msgid "Paper"
+msgstr ""
+
+#: estateobjects/models.py:92
+msgid "Mixed"
+msgstr ""
+
+#: estateobjects/models.py:98
+msgid "Perfect"
+msgstr ""
+
+#: estateobjects/models.py:99
+msgid "Slightly deteriorated"
+msgstr ""
+
+#: estateobjects/models.py:100
+msgid "Needs restoration"
+msgstr ""
+
+#: estateobjects/models.py:101
+msgid "Non restorable"
+msgstr ""
+
+#: estateobjects/templates/estateobjects/estateobject_detail.html:24
+msgid "Previous"
+msgstr ""
+
+#: estateobjects/templates/estateobjects/estateobject_detail.html:28
+msgid "Next"
+msgstr ""
+
+#: estateobjects/templates/estateobjects/estateobject_detail.html:51
+msgid "Thank you for having bid on this object. We will contact you soon."
+msgstr ""

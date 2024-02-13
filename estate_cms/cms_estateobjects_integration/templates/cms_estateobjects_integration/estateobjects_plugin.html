@@ -1,4 +1,4 @@
-{% load thumbnail static fontawesome_5 %}
+{% load thumbnail i18n static fontawesome_5 %}
 
 {% fontawesome_5_static %} 
 
@@ -12,17 +12,17 @@
 	{% endif %}
       </a>
       <div class="card-body">
-	<h5 class="card-title"><em>{{ object.title }}</em>, {{ object.creation_year }}</p>
+	<h5 class="card-title"><em>{{ object.title }}</em>{{ object.creation_date_str }}</p>
         <h6 class="card-subtitle mb-2 text-muted">
 	  {{ object.charaterisation_str }}
 	</h6>
-	<p class="card-text taxon-name">{{ object.description }}</p>
+	<p class="card-text">{{ object.description }}</p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item d-flex justify-content-between align-middle">
-	  <span class="text-muted align-middle">{% if object.available %}{% fa5_icon 'check' 'fa' %} available{% else %}{% fa5_icon 'lock' 'fa' %} not available{% endif %}</span>
+	  <span class="text-muted align-middle">{% if object.available %}{% fa5_icon 'check' 'fa' %} {%trans "available" %}{% else %}{% fa5_icon 'lock' 'fa' %} {% trans "not available" %}{% endif %}</span>
 	  <a href="{% url 'estateobjects:detail' object.id %}#bid"
-	     class="btn btn-sm {% if object.available %}btn-dark{% else %}btn-outline-secondary{% endif %} {% if not object.available %}disabled{% endif %}">Place bid</a>
+	     class="btn btn-sm {% if object.available %}btn-dark{% else %}btn-outline-secondary{% endif %} {% if not object.available %}disabled{% endif %}">{% trans "I'm interested" %}</a>
 	</li>
       </ul>
     </div>

@@ -81,6 +81,5 @@ def place_bid(request, pk):
         messages.add_message(request, messages.INFO, "Successfully created bid.")
         return HttpResponseRedirect(reverse('estateobjects:detail', kwargs={'pk': pk}))
     else:
-        print("Invalid")
         messages.add_message(request, messages.ERROR, "Could not create bid.")
         return HttpResponseRedirect(reverse('estateobjects:detail', kwargs={'pk': pk}))
