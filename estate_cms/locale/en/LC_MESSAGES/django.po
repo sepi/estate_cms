@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 06:11+0000\n"
+"POT-Creation-Date: 2024-02-13 07:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: cms_estateobjects_integration/cms_toolbars.py:15
 msgid "Estate objects"
 msgstr ""
@@ -61,7 +62,7 @@ msgstr ""
 msgid "French"
 msgstr ""
 
-#: estate_cms/settings.py:238
+#: estate_cms/settings.py:241
 msgid "Standard"
 msgstr ""
 
@@ -71,6 +72,48 @@ msgstr ""
 
 #: estateobjects/cms_plugins.py:11
 msgid "Estate Object List"
+msgstr ""
+
+#: estateobjects/forms.py:12
+msgid "Full Name *"
+msgstr ""
+
+#: estateobjects/forms.py:13
+msgid "Your first and second name"
+msgstr ""
+
+#: estateobjects/forms.py:16
+msgid "Email address *"
+msgstr ""
+
+#: estateobjects/forms.py:17
+msgid "Your valid email-address"
+msgstr ""
+
+#: estateobjects/forms.py:20
+msgid "Post address"
+msgstr ""
+
+#: estateobjects/forms.py:22
+msgid "Your postal address (optional)"
+msgstr ""
+
+#: estateobjects/forms.py:26
+msgid "Phone number"
+msgstr ""
+
+#: estateobjects/forms.py:28
+msgid "A phone number including prefix (eg. +352, optional)"
+msgstr ""
+
+#: estateobjects/forms.py:32
+msgid "Price you want to pay in € *"
+msgstr ""
+
+#: estateobjects/forms.py:34
+msgid ""
+"An indication of the price you are willing to pay. We might gift you the "
+"objet if you put in 0."
 msgstr ""
 
 #: estateobjects/models.py:25

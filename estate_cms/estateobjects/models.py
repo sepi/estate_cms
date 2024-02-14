@@ -3,7 +3,7 @@ import calendar
 from django.contrib.gis.db import models
 from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator 
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 from filer.fields.image import FilerImageField
 from ordered_model.models import OrderedModel
@@ -116,15 +116,15 @@ class EstateObject(OrderedModel):
         return self.reserved_for is None
 
     def characterisation_str(self):
-        return ", ".join(filter(lambda x: x != '' and x != 'State: ',
+        return ", ".join(filter(lambda x: x != '' and x != _('State: '),
                                 [self.get_object_type_display(),
                                  self.get_object_material_display(),
-                                 "State: "+self.get_object_state_display()]))
+                                 _("State: ")+self.get_object_state_display()]))
 
     def dimension_str(self):
-        return ", ".join(map(lambda what, val: f"{what}: {val} cm",
-                             ["W", "H", "D"],
-                             [self.width_cm, self.height_cm, self.depth_cm]))
+        return ", ".join(map(lambda x: f"{x[0]}: {x[1]} cm",
+                             filter(lambda x: x[1],
+                                    [(_("Width"), self.width_cm), (_("Height"), self.height_cm), (_("Depth"), self.depth_cm)])))
 
     def creation_date_str(self):
         if self.creation_month and self.creation_year:

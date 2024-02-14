@@ -11,16 +11,18 @@
 	<img src="{% thumbnail object.image_main 300x300 crop subject_location=object.image_main.subject_location %}" class="card-img-top" alt="orchid image">
 	{% endif %}
       </a>
-      <div class="card-body">
+      <div class="card-body d-flex flex-column">
 	<h5 class="card-title"><em>{{ object.title }}</em>{{ object.creation_date_str }}</p>
         <h6 class="card-subtitle mb-2 text-muted">
 	  {{ object.charaterisation_str }}
 	</h6>
-	<p class="card-text">{{ object.description }}</p>
+	<p class="card-text flex-fill">{{ object.description }}</p>
+        <a href="{% url 'estateobjects:detail' object.id %}"
+	   class="card-link">{% trans "See details" %}</a>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between align-middle">
-	  <span class="text-muted align-middle">{% if object.available %}{% fa5_icon 'check' 'fa' %} {%trans "available" %}{% else %}{% fa5_icon 'lock' 'fa' %} {% trans "not available" %}{% endif %}</span>
+        <li class="list-group-item d-flex justify-content-between align-items-center px-2">
+	  <span class="text-muted small align-middle">{% if object.available %}{% fa5_icon 'check' 'fa' %}&nbsp;{% trans "available" %}{% else %}{% fa5_icon 'lock' 'fa' %} {% trans "not available" %}{% endif %}</span>
 	  <a href="{% url 'estateobjects:detail' object.id %}#bid"
 	     class="btn btn-sm {% if object.available %}btn-dark{% else %}btn-outline-secondary{% endif %} {% if not object.available %}disabled{% endif %}">{% trans "I'm interested" %}</a>
 	</li>

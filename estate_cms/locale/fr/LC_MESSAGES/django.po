@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 06:11+0000\n"
+"POT-Creation-Date: 2024-02-13 08:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
 #: cms_estateobjects_integration/cms_toolbars.py:15
 msgid "Estate objects"
-msgstr ""
+msgstr "Objets"
 
 #: cms_estateobjects_integration/cms_toolbars.py:19
 msgid "Bids"
@@ -33,19 +34,22 @@ msgstr "Contactes"
 msgid "Stores"
 msgstr "Dépot"
 
-#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:23
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:21
+msgid "See details"
+msgstr "Voir plus"
+
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
 #: estateobjects/templates/estateobjects/estateobject_detail.html:57
 msgid "available"
 msgstr "disponible"
 
-#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:23
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
 #: estateobjects/templates/estateobjects/estateobject_detail.html:57
 msgid "not available"
 msgstr "pas disponible"
 
-#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:27
 #: estateobjects/templates/estateobjects/estateobject_detail.html:64
-#: estateobjects/templates/estateobjects/estateobject_detail.html:74
 msgid "I'm interested"
 msgstr "Je suis intéressé"
 
@@ -61,7 +65,7 @@ msgstr "Français"
 msgid "French"
 msgstr "Français"
 
-#: estate_cms/settings.py:238
+#: estate_cms/settings.py:241
 msgid "Standard"
 msgstr "Standard"
 
@@ -72,6 +76,54 @@ msgstr "Objets"
 #: estateobjects/cms_plugins.py:11
 msgid "Estate Object List"
 msgstr "Liste d'objets"
+
+#: estateobjects/forms.py:12
+msgid "Full Name *"
+msgstr "Nom complèt *"
+
+#: estateobjects/forms.py:13
+msgid "Your first and second name"
+msgstr "Votre prénom et nom de famille"
+
+#: estateobjects/forms.py:16
+msgid "Email address *"
+msgstr "Address email *"
+
+#: estateobjects/forms.py:17
+msgid "Your email-address"
+msgstr "Votre address email"
+
+#: estateobjects/forms.py:20
+msgid "Post address"
+msgstr "Address postale"
+
+#: estateobjects/forms.py:22
+msgid "Your postal address (optional)"
+msgstr "Votre addresse postale (optione)"
+
+#: estateobjects/forms.py:26
+msgid "Phone number"
+msgstr "Numéro de téléphone"
+
+#: estateobjects/forms.py:28
+msgid "A phone number including prefix (eg. +352, optional)"
+msgstr "Un numéro de téléphone avec préfixe (p.ex: +352, optionel)"
+
+#: estateobjects/forms.py:32
+msgid "Price you want to pay in € *"
+msgstr "Prix en € que vous voulez payer *"
+
+#: estateobjects/forms.py:34
+#, fuzzy
+#| msgid ""
+#| "An indication of the price you are willing to pay. We might gift you the "
+#| "object if you put in 0."
+msgid ""
+"An indication of the price you are willing to pay. We might gift you the "
+"objet if you put in 0."
+msgstr ""
+"Une indication sur le prix que vous voulez payer. On vous donnera l'objet en "
+"cadeau peut être si vous mettez 0."
 
 #: estateobjects/models.py:25
 msgid "Box"
@@ -141,6 +193,22 @@ msgstr "Nécessite restauration"
 msgid "Non restorable"
 msgstr "Non restaurable"
 
+#: estateobjects/models.py:119 estateobjects/models.py:122
+msgid "State: "
+msgstr "État: "
+
+#: estateobjects/models.py:127
+msgid "Width"
+msgstr "Largeur"
+
+#: estateobjects/models.py:127
+msgid "Height"
+msgstr "Hauteur"
+
+#: estateobjects/models.py:127
+msgid "Depth"
+msgstr "Profondeur"
+
 #: estateobjects/templates/estateobjects/estateobject_detail.html:24
 msgid "Previous"
 msgstr "Antécédant"
@@ -151,4 +219,18 @@ msgstr "Prochain"
 
 #: estateobjects/templates/estateobjects/estateobject_detail.html:51
 msgid "Thank you for having bid on this object. We will contact you soon."
-msgstr "Merci pour avoir signalé votre intérêt. Nous vous contacterons bientôt."
+msgstr ""
+"Merci pour avoir signalé votre intérêt. Nous vous contacterons bientôt."
+
+#: estateobjects/templates/estateobjects/estateobject_detail.html:74
+msgid "Notify interest"
+msgstr "Signaler intérèt"
+
+#~ msgid "W"
+#~ msgstr "L"
+
+#~ msgid "H"
+#~ msgstr "H"
+
+#~ msgid "D"
+#~ msgstr "P"

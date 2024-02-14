@@ -10,12 +10,19 @@ class ImageInline(OrderedTabularInline):
     fields = ('image', 'move_up_down_links',)
     readonly_fields = ('move_up_down_links',)
     ordering = ('order',)
-    extra = 1
+    extra = 0
+
+class BidInline(admin.TabularInline):
+    model = Bid
+    readonly_fields = ('created_at', )
+    fields = ('created_at', 'bidder', 'price')
+    ordering = ('created_at', )
+    extra = 0
 
 class EstateObjectAdmin(OrderedInlineModelAdminMixin, OrderedModelAdmin):
     model = EstateObject
 
-    inlines = ( ImageInline, )
+    inlines = ( BidInline, ImageInline, )
 
     fields = [ ('title', 'collection_id'),
                ('creation_year', 'creation_month'),
