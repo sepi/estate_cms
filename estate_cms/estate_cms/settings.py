@@ -211,6 +211,9 @@ USE_THOUSAND_SEPARATOR = False
 
 USE_TZ = True
 
+LOCALE_PATHS = [
+    BASE_DIR / 'locale'
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
@@ -257,6 +260,7 @@ TEXT_INLINE_EDITING = True
 
 STATICFILES_DIRS = [
     BASE_DIR / "estate_cms" / "static",
+    BASE_DIR / "estateobjects" / "static",
 ]
 
 INTERNAL_IPS = [

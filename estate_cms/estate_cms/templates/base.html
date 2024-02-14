@@ -1,5 +1,5 @@
 {% extends "bootstrap5/base.html" %}
-{% load cms_tags menu_tags djangocms_alias_tags %}
+{% load static cms_tags menu_tags djangocms_alias_tags %}
 
 {% block base_css %}
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -18,6 +18,12 @@
       margin-top: 40px;
   }
 </style>
+{% endblock %}
+
+{# This is needed to put lightbox after bootstrap #}
+{% block base_js %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="{% static "lightbox.min.js" %}"></script>
 {% endblock %}
 
 {% block body_attrs %}

@@ -13,7 +13,11 @@
 	    {% for i in object.images %}
 	    <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
 	      <div class="d-flex" style="width:650px; height:650px;justify-content: center; align-items: center;">
-		<img class="" src="{% thumbnail i 650x650 subject_location=i.subject_location %}" >
+		<a href="{{ i.url }}"
+		   class="lightbox-toggle"
+		   data-gallery="gallery">
+		  <img src="{% thumbnail i 650x650 subject_location=i.subject_location %}">
+		</a>
 	      </div>
 	    </div>
 	    {% endfor %}
@@ -95,6 +99,18 @@
 	  let btn = document.getElementById("bid-form-toggle");
 	  btn.remove();
       }
-  } 
-</script> 
+  }
+
+  const options = {
+      keyboard: true,
+      size: 'fullscreen',
+      constrain: true,
+  };
+
+  document.querySelectorAll('.lightbox-toggle').forEach((el) => el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const lightbox = new Lightbox(el, options);
+      lightbox.show();
+  }));
+</script>
 {% endblock %}
