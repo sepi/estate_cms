@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 08:13+0000\n"
+"POT-Creation-Date: 2024-02-14 23:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,17 +39,17 @@ msgid "See details"
 msgstr "Voir plus"
 
 #: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
-#: estateobjects/templates/estateobjects/estateobject_detail.html:57
+#: estateobjects/templates/estateobjects/estateobject_detail.html:64
 msgid "available"
 msgstr "disponible"
 
 #: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
-#: estateobjects/templates/estateobjects/estateobject_detail.html:57
+#: estateobjects/templates/estateobjects/estateobject_detail.html:64
 msgid "not available"
 msgstr "pas disponible"
 
 #: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:27
-#: estateobjects/templates/estateobjects/estateobject_detail.html:64
+#: estateobjects/templates/estateobjects/estateobject_detail.html:71
 msgid "I'm interested"
 msgstr "Je suis intéressé"
 
@@ -153,76 +153,96 @@ msgstr "Toile"
 msgid "Drawing"
 msgstr "Dessin"
 
-#: estateobjects/models.py:83 estateobjects/models.py:93
+#: estateobjects/models.py:83
+msgid "Maquette"
+msgstr "Maquette"
+
+#: estateobjects/models.py:84 estateobjects/models.py:97
 msgid "Other"
 msgstr "Autre"
 
-#: estateobjects/models.py:88
+#: estateobjects/models.py:89
 msgid "Steel"
 msgstr "Acier"
 
-#: estateobjects/models.py:89
+#: estateobjects/models.py:90
 msgid "Bronze"
 msgstr "Bronze"
 
-#: estateobjects/models.py:90
+#: estateobjects/models.py:91
+msgid "Aluminium"
+msgstr "Aluminium"
+
+#: estateobjects/models.py:92
 msgid "Wood"
 msgstr "Bois"
 
-#: estateobjects/models.py:91
+#: estateobjects/models.py:93
 msgid "Paper"
 msgstr "Papier"
 
-#: estateobjects/models.py:92
+#: estateobjects/models.py:94
+msgid "Stone"
+msgstr "Pierre"
+
+#: estateobjects/models.py:95
+msgid "Ceramic"
+msgstr "Céramique"
+
+#: estateobjects/models.py:96
 msgid "Mixed"
 msgstr "Mélange"
 
-#: estateobjects/models.py:98
+#: estateobjects/models.py:102
 msgid "Perfect"
 msgstr "Parfait"
 
-#: estateobjects/models.py:99
+#: estateobjects/models.py:103
 msgid "Slightly deteriorated"
 msgstr "Légèrement détérioré"
 
-#: estateobjects/models.py:100
+#: estateobjects/models.py:104
 msgid "Needs restoration"
 msgstr "Nécessite restauration"
 
-#: estateobjects/models.py:101
+#: estateobjects/models.py:105
 msgid "Non restorable"
 msgstr "Non restaurable"
 
-#: estateobjects/models.py:119 estateobjects/models.py:122
+#: estateobjects/models.py:123 estateobjects/models.py:126
 msgid "State: "
 msgstr "État: "
 
-#: estateobjects/models.py:127
+#: estateobjects/models.py:131
 msgid "Width"
 msgstr "Largeur"
 
-#: estateobjects/models.py:127
+#: estateobjects/models.py:131
 msgid "Height"
 msgstr "Hauteur"
 
-#: estateobjects/models.py:127
+#: estateobjects/models.py:131
 msgid "Depth"
 msgstr "Profondeur"
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:24
+#: estateobjects/templates/estateobjects/estateobject_detail.html:28
 msgid "Previous"
 msgstr "Antécédant"
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:28
+#: estateobjects/templates/estateobjects/estateobject_detail.html:32
 msgid "Next"
 msgstr "Prochain"
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:51
+#: estateobjects/templates/estateobjects/estateobject_detail.html:48
+msgid "Collection id: "
+msgstr "Identifiant collection"
+
+#: estateobjects/templates/estateobjects/estateobject_detail.html:58
 msgid "Thank you for having bid on this object. We will contact you soon."
 msgstr ""
 "Merci pour avoir signalé votre intérêt. Nous vous contacterons bientôt."
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:74
+#: estateobjects/templates/estateobjects/estateobject_detail.html:81
 msgid "Notify interest"
 msgstr "Signaler intérèt"
 

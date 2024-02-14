@@ -80,15 +80,19 @@ class EstateObject(OrderedModel):
         SCULPTURE = "SC", _("Sculpture")
         PAINTING = "PA", _("Painting")
         DRAWING = "DR", _("Drawing")
+        MAQUETTE = "MA", _("Maquette")
         OTHER = "OT", _("Other")
 
     object_type = models.CharField(blank=True, max_length=2, choices=EstateObjectType)
 
     class Material(models.TextChoices):
-        STEEL = "ST", _("Steel")
+        STEEL = "SL", _("Steel")
         BRONZE = "BR", _("Bronze")
+        ALUMINIUM = "AL", _("Aluminium")
         WOOD = "WO", _("Wood")
         PAPER = "PA", _("Paper")
+        STONE = "SN", _("Stone")
+        CERAMIC = "CE", _("Ceramic")
         MIXED = "MI", _("Mixed")
         OTHER = "OT", _("Other")
 
