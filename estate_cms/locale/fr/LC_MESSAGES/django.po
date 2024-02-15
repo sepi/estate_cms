@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-14 23:13+0000\n"
+"POT-Creation-Date: 2024-02-15 08:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,17 +39,17 @@ msgid "See details"
 msgstr "Voir plus"
 
 #: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
-#: estateobjects/templates/estateobjects/estateobject_detail.html:64
+#: estateobjects/templates/estateobjects/estateobject_detail.html:85
 msgid "available"
 msgstr "disponible"
 
 #: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
-#: estateobjects/templates/estateobjects/estateobject_detail.html:64
+#: estateobjects/templates/estateobjects/estateobject_detail.html:85
 msgid "not available"
 msgstr "pas disponible"
 
 #: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:27
-#: estateobjects/templates/estateobjects/estateobject_detail.html:71
+#: estateobjects/templates/estateobjects/estateobject_detail.html:92
 msgid "I'm interested"
 msgstr "Je suis intéressé"
 
@@ -225,24 +225,24 @@ msgstr "Hauteur"
 msgid "Depth"
 msgstr "Profondeur"
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:28
+#: estateobjects/templates/estateobjects/estateobject_detail.html:49
 msgid "Previous"
 msgstr "Antécédant"
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:32
+#: estateobjects/templates/estateobjects/estateobject_detail.html:53
 msgid "Next"
 msgstr "Prochain"
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:48
+#: estateobjects/templates/estateobjects/estateobject_detail.html:69
 msgid "Collection id: "
-msgstr "Identifiant collection"
+msgstr "Identifiant collection: "
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:58
+#: estateobjects/templates/estateobjects/estateobject_detail.html:79
 msgid "Thank you for having bid on this object. We will contact you soon."
 msgstr ""
 "Merci pour avoir signalé votre intérêt. Nous vous contacterons bientôt."
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:81
+#: estateobjects/templates/estateobjects/estateobject_detail.html:102
 msgid "Notify interest"
 msgstr "Signaler intérèt"
 

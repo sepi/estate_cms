@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 07:46+0000\n"
+"POT-Creation-Date: 2024-02-15 08:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,19 +34,22 @@ msgstr ""
 msgid "Stores"
 msgstr ""
 
-#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:23
-#: estateobjects/templates/estateobjects/estateobject_detail.html:57
-msgid "available"
-msgstr ""
-
-#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:23
-#: estateobjects/templates/estateobjects/estateobject_detail.html:57
-msgid "not available"
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:21
+msgid "See details"
 msgstr ""
 
 #: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
-#: estateobjects/templates/estateobjects/estateobject_detail.html:64
-#: estateobjects/templates/estateobjects/estateobject_detail.html:74
+#: estateobjects/templates/estateobjects/estateobject_detail.html:85
+msgid "available"
+msgstr ""
+
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:25
+#: estateobjects/templates/estateobjects/estateobject_detail.html:85
+msgid "not available"
+msgstr ""
+
+#: cms_estateobjects_integration/templates/cms_estateobjects_integration/estateobjects_plugin.html:27
+#: estateobjects/templates/estateobjects/estateobject_detail.html:92
 msgid "I'm interested"
 msgstr ""
 
@@ -87,7 +90,7 @@ msgid "Email address *"
 msgstr ""
 
 #: estateobjects/forms.py:17
-msgid "Your valid email-address"
+msgid "Your email-address"
 msgstr ""
 
 #: estateobjects/forms.py:20
@@ -144,54 +147,94 @@ msgstr ""
 msgid "Drawing"
 msgstr ""
 
-#: estateobjects/models.py:83 estateobjects/models.py:93
+#: estateobjects/models.py:83
+msgid "Maquette"
+msgstr ""
+
+#: estateobjects/models.py:84 estateobjects/models.py:97
 msgid "Other"
 msgstr ""
 
-#: estateobjects/models.py:88
+#: estateobjects/models.py:89
 msgid "Steel"
 msgstr ""
 
-#: estateobjects/models.py:89
+#: estateobjects/models.py:90
 msgid "Bronze"
 msgstr ""
 
-#: estateobjects/models.py:90
-msgid "Wood"
-msgstr ""
-
 #: estateobjects/models.py:91
-msgid "Paper"
+msgid "Aluminium"
 msgstr ""
 
 #: estateobjects/models.py:92
+msgid "Wood"
+msgstr ""
+
+#: estateobjects/models.py:93
+msgid "Paper"
+msgstr ""
+
+#: estateobjects/models.py:94
+msgid "Stone"
+msgstr ""
+
+#: estateobjects/models.py:95
+msgid "Ceramic"
+msgstr ""
+
+#: estateobjects/models.py:96
 msgid "Mixed"
 msgstr ""
 
-#: estateobjects/models.py:98
+#: estateobjects/models.py:102
 msgid "Perfect"
 msgstr ""
 
-#: estateobjects/models.py:99
+#: estateobjects/models.py:103
 msgid "Slightly deteriorated"
 msgstr ""
 
-#: estateobjects/models.py:100
+#: estateobjects/models.py:104
 msgid "Needs restoration"
 msgstr ""
 
-#: estateobjects/models.py:101
+#: estateobjects/models.py:105
 msgid "Non restorable"
 msgstr ""
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:24
+#: estateobjects/models.py:123 estateobjects/models.py:126
+msgid "State: "
+msgstr ""
+
+#: estateobjects/models.py:131
+msgid "Width"
+msgstr ""
+
+#: estateobjects/models.py:131
+msgid "Height"
+msgstr ""
+
+#: estateobjects/models.py:131
+msgid "Depth"
+msgstr ""
+
+#: estateobjects/templates/estateobjects/estateobject_detail.html:49
 msgid "Previous"
 msgstr ""
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:28
+#: estateobjects/templates/estateobjects/estateobject_detail.html:53
 msgid "Next"
 msgstr ""
 
-#: estateobjects/templates/estateobjects/estateobject_detail.html:51
+#: estateobjects/templates/estateobjects/estateobject_detail.html:69
+msgid "Collection id: "
+msgstr ""
+
+#: estateobjects/templates/estateobjects/estateobject_detail.html:79
 msgid "Thank you for having bid on this object. We will contact you soon."
+msgstr ""
+
+#: estateobjects/templates/estateobjects/estateobject_detail.html:102
+msgid "Notify interest"
 msgstr ""
