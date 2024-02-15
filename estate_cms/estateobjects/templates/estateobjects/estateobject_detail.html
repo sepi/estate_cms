@@ -23,7 +23,25 @@
     </div>
   </div>
   {% endif %}
+  
   <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-12">
+	<div class="row d-flex justify-content-end">
+	  <div class="col">
+	    {% if prev_object_id %}
+	    <a class="btn btn-outline-secondary btn-small" href="{% url 'estateobjects:detail' prev_object_id  %}">&lt; {% translate "previous" %}</a>
+	    {% endif %}
+	  </div>
+	  <div class="col d-flex justify-content-end">
+	    {% if next_object_id %}
+	    <a class="btn btn-outline-secondary btn-small" href="{% url 'estateobjects:detail' next_object_id  %}">{% translate "next" %} &gt;</a>
+            {% endif %}
+	  </div>
+	</div>
+      </div>
+    </div>
+    
     <div class="row">
       <div class="col col-6-lg mb-3">
 	<div id="carousel-{{forloop.counter0}}"

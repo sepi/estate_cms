@@ -40,6 +40,13 @@ class EstateObjectDetailView(DetailView):
         else:
             context["bid_form"] = BidForm()
             context["already_bid"] = False
+
+        # Find prev and next object
+        this_object = self.get_object()
+        prev = this_object.previous()
+        next = this_object.next() 
+        context['prev_object_id'] = prev.id if prev else None
+        context['next_object_id'] = next.id if next else None
         
         return context
 

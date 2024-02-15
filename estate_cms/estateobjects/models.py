@@ -137,6 +137,12 @@ class EstateObject(OrderedModel):
             return f", {self.creation_year}"
         else:
             return ""
+
+    def previous(self):
+        return EstateObject.objects.filter(order__lt=self.order).order_by('-order').first()
+
+    def next(self):
+        return EstateObject.objects.filter(order__gt=self.order).order_by('order').first()
     
     def __str__(self):
         if self.creation_year:
