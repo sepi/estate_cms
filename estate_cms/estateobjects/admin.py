@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.db import models
 from django.forms import TextInput, Textarea, NumberInput
+from cms.admin.placeholderadmin import FrontendEditableAdminMixin
 from estateobjects.models import Contact, Store, Bid, Image, EstateObject
 
 from ordered_model.admin import OrderedTabularInline, OrderedInlineModelAdminMixin, OrderedModelAdmin
@@ -19,7 +20,7 @@ class BidInline(admin.TabularInline):
     ordering = ('created_at', )
     extra = 0
 
-class EstateObjectAdmin(OrderedInlineModelAdminMixin, OrderedModelAdmin):
+class EstateObjectAdmin(FrontendEditableAdminMixin, OrderedInlineModelAdminMixin, OrderedModelAdmin):
     model = EstateObject
 
     inlines = ( BidInline, ImageInline, )

@@ -1,9 +1,10 @@
-{% load thumbnail i18n static fontawesome_5 %}
+{% load cms_tags thumbnail i18n static fontawesome_5 %}
 
 {% fontawesome_5_static %} 
 
 <div class="row imagerow row-cols-lg-4">
 {% for object in object_list %}
+  {% render_model_block object %}
   <div class="col mb-4">
     <div class="card h-100">
       <a href={% url 'estateobjects:detail' object.id %}>
@@ -29,5 +30,6 @@
       </ul>
     </div>
   </div>
+  {% endrender_model_block %}
 {% endfor %}
 </div>
