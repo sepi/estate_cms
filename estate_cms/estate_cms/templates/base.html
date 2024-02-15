@@ -13,9 +13,13 @@
   .navbar {
       background-color: #900 !important;
   }
+
+  .navbar-brand {
+      color: #ffd5bb;
+  }
   
   main {
-      margin-top: 40px;
+      margin-top: 20px;
   }
 </style>
 {% endblock %}
@@ -33,7 +37,7 @@ class="d-flex flex-column h-100"
 {% block navbar %}
     <nav class="navbar {% block navbar_options %}navbar-expand-lg navbar-dark bg-light{% endblock %}">
         <div class="container">
-            <a class="navbar-brand" href="/">{% block brand %}{% endblock %}</a>
+            <a class="navbar-brand" href="/">{% block brand %}{% static_alias "Brand" %}{% endblock %}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,6 +51,26 @@ class="d-flex flex-column h-100"
 
 {% block content %}
 <main class="flex-shrink-0">
+  {% if messages %}
+  <div class="fixed-top container">
+    <div class="row messages">
+      <div class="col-lg-4 offset-lg-4"
+	   style="top: 5px">
+      {% for message in messages %}
+      <div{% if message.tags %}
+	     class="alert alert-{{ message.tags }} alert-dismissible fade show"{% endif %}
+	     role="alert">
+	{{ message }}
+	<button type="button"
+		class="btn-close"
+		data-bs-dismiss="alert"
+		aria-label="Close"></button>
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
   {% placeholder "Page Content" %}
 </main>
 <footer class="footer mt-auto py-3 bg-light">

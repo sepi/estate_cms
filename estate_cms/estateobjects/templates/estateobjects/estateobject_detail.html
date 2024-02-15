@@ -3,6 +3,26 @@
 {% block content %}
 {% fontawesome_5_static %}
 <main>
+  {% if messages %}
+  <div class="fixed-top container">
+    <div class="row messages">
+      <div class="col-lg-4 offset-lg-4"
+	   style="top: 5px">
+      {% for message in messages %}
+      <div{% if message.tags %}
+	     class="alert alert-{{ message.tags }} alert-dismissible fade show"{% endif %}
+	     role="alert">
+	{{ message }}
+	<button type="button"
+		class="btn-close"
+		data-bs-dismiss="alert"
+		aria-label="Close"></button>
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
   <div class="container">
     <div class="row">
       <div class="col col-6-lg mb-3">
