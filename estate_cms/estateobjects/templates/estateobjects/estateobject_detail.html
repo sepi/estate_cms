@@ -73,6 +73,7 @@
 	</div>
       </div>
       <div class="col col-6-lg mb-3">
+	{% render_model_block object %}
 	<div class="card h-100">
 	  <div class="card-body">
 	    <h2 class="card-title display-6"><em>{{ object.title }}</em>{{ object.creation_date_str }}</h2>
@@ -122,6 +123,7 @@
 	    {% endif %}
 	  </ul>
 	</div>
+        {% endrender_model_block %}
       </div>
     </div>
   </div>
