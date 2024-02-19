@@ -1,0 +1,4 @@
+recursive-include estate_cms/estate_cms/templates/ *.html
+recursive-include estate_cms/estateobjects/templates/ *.html
+recursive-include estate_cms/cms_estateobjects_integration/templates/ *.html
+graft estate_cms/static/

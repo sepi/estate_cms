@@ -1,0 +1,24 @@
+[project]
+name = "estate_cms"
+version = "24.2.18"
+dynamic = ["dependencies"]
+
+[project.scripts]
+estate_cms = "estate_cms.manage:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+# Create separate distribution modules for each app and for static
+# files to emulate the way a regular manage.py managed django project works
+estate_cms_static = "estate_cms/static"
+estate_cms = "estate_cms/estate_cms"
+estateobjects = "estate_cms/estateobjects"
+cms_estateobjects_integration = "estate_cms/cms_estateobjects_integration"
+
+[tool.setuptools.dynamic]
+# Dependencies are read from requirements.txt generate using pip-tools
+# compile and sync
+dependencies = {file = ["estate_cms/requirements.txt"]}
