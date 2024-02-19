@@ -5,8 +5,8 @@ from django.urls import reverse
 from django.contrib import messages
 from django.core.exceptions import PermissionDenied
 
-from estate_cms.estateobjects.models import EstateObject, Bid, Contact
-from estate_cms.estateobjects.forms import BidForm
+from estateobjects.models import EstateObject, Bid, Contact
+from estateobjects.forms import BidForm
 
 def find_contact_by_match(cd):
     contact = Contact.objects.get(name=cd['name'],

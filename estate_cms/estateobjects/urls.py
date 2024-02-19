@@ -1,5 +1,5 @@
 from django.urls import path
-from estate_cms.estateobjects.views import EstateObjectDetailView, place_bid
+from estateobjects.views import EstateObjectDetailView, place_bid
 
 # app_name = 'estateobjects'
 urlpatterns = [
