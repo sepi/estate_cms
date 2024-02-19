@@ -4,3 +4,4 @@ djangocms-versioning
 djangocms-alias
 django-ordered-model
 django-fontawesome-5
+gunicorn
