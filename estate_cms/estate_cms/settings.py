@@ -245,7 +245,7 @@ CMS_TEMPLATES = (
 # Enable permissions
 # https://docs.django-cms.org/en/release-4.1.x/topics/permissions.html
 
-CMS_PERMISSION = True
+CMS_PERMISSION = False
 
 # Allow admin sidebar to open admin URLs
 
