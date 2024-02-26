@@ -275,6 +275,7 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = str(BASE_DIR.parent / "media")
 
 CMS_SIDEFRAME_ENABLED = False
+CMS_PERMISSION = False
 
 THUMBNAIL_ALIASES = {
     '': {
@@ -284,3 +285,5 @@ THUMBNAIL_ALIASES = {
         },
     },
 }
+
+FILER_PAGINATE_BY = 250

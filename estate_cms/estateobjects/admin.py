@@ -36,8 +36,13 @@ class EstateObjectAdmin(FrontendEditableAdminMixin, OrderedInlineModelAdminMixin
                'description',
     ]
 
-    list_display = ('collection_id', 'title', 'creation_year',
-                    'reserved_for',  'move_up_down_links', 'order')
+    list_display = ('collection_id', 'title', 'creation_year', 'creation_month',
+                    'description', 'store', 'height_cm', 'object_type', 'object_state',
+                    'reserved_for', 'owner', 'move_up_down_links')
+
+    list_filter = ('creation_year',
+                   'store', 'object_type', 'object_state',
+                   'reserved_for', 'owner', 'image')
 
 admin.site.register(Contact)
 admin.site.register(Store)

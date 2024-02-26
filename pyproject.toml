@@ -1,6 +1,6 @@
 [project]
 name = "estate_cms"
-version = "24.2.18"
+version = "24.2.26"
 dynamic = ["dependencies"]
 
 [project.scripts]
