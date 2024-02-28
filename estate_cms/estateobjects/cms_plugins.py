@@ -10,7 +10,7 @@ class EstateobjectListPlugin(CMSPluginBase):
     module = _("Estate Objects")
     mame = _("Estate Object List")
     render_template = "cms_estateobjects_integration/estateobjects_plugin.html"
-    cache = False
+    cache = True
 
     def render(self, context, instance, placeholder):
         context = super().render(context, instance, placeholder)
