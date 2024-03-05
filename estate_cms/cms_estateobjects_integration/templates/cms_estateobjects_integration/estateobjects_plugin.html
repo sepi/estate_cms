@@ -9,7 +9,16 @@
     <div class="card h-100">
       <a href={% url 'estateobjects:detail' object.id %}>
 	{% if object.image_main %}
-	<img src="{% thumbnail object.image_main 300x300 crop subject_location=object.image_main.subject_location %}" class="card-img-top" alt="orchid image">
+	{% thumbnail object.image_main 333x500 bg_color="#aaa" subject_location=object.image_main.subject_location as thumb %}
+	<img src="{{ thumb.url }}"
+	     class="card-img-top"
+	     style="object-fit: contain;"
+	     alt="image of {{ object.title }}"
+	{% else %}
+	<img src="{% static 'estateobjects/images/image-missing.jpg' %}"
+	     class="card-img-top"
+	     style="object-fit: contain;"
+	     alt="image of {{ object.title }}">
 	{% endif %}
       </a>
       <div class="card-body d-flex flex-column">

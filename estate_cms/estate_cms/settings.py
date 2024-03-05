@@ -132,10 +132,24 @@ TEMPLATES = [
 
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
-    'easy_thumbnails.processors.autocrop',
+    'estate_cms.common.pad_image',
+    # 'easy_thumbnails.processors.autocrop',
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
-    'easy_thumbnails.processors.filters',
 )
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'default': {
+            'size': (600,400),
+            'crop': 'intelligent',
+            'background': '#444',
+            'bg_color': '#444',
+        },
+    },
+}
+
+if DEBUG:
+    THUMBNAIL_DEBUG = True
 
 WSGI_APPLICATION = 'estate_cms.wsgi.application'
 
@@ -281,13 +295,4 @@ MEDIA_ROOT = str(BASE_DIR.parent / "media")
 CMS_SIDEFRAME_ENABLED = False
 CMS_PERMISSION = False
 
-THUMBNAIL_ALIASES = {
-    '': {
-        'default': {
-            'size': (600,400),
-            'crop': 'intelligent'
-        },
-    },
-}
-
-FILER_PAGINATE_BY = 250
+FILER_PAGINATE_BY = 350
