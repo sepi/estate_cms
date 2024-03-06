@@ -50,7 +50,7 @@
 	  <div class="carousel-inner">
 	    {% for i in object.images %}
 	    <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
-	      <div class="d-flex" style="width:650px; height:650px;justify-content: center; align-items: center;">
+	      <div class="d-flex" style="justify-content: center; align-items: center;">
 		<a href="{{ i.url }}"
 		   class="lightbox-toggle"
 		   data-gallery="gallery">
