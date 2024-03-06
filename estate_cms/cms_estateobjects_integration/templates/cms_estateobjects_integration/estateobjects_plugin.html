@@ -6,7 +6,7 @@
 {% for object in object_list %}
   {% render_model_block object %}
   <div class="col mb-4">
-    <div class="card h-100">
+    <div class="card h-100" style="min-width: 200px">
       <a href={% url 'estateobjects:detail' object.id %}>
 	{% if object.image_main %}
 	{% thumbnail object.image_main 333x500 bg_color="#aaa" subject_location=object.image_main.subject_location as thumb %}
@@ -31,8 +31,8 @@
 	   class="card-link">{% trans "See details" %}</a>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between align-items-center px-2">
-	  <span class="text-muted small align-middle">{% if object.available %}{% fa5_icon 'check' 'fa' %}&nbsp;{% trans "available" %}{% else %}{% fa5_icon 'lock' 'fa' %} {% trans "not available" %}{% endif %}</span>
+        <li class="list-group-item d-flex flex-wrap justify-content-between align-items-center px-2">
+	  <span class="text-muted small align-middle m-2">{% if object.available %}{% fa5_icon 'check' 'fa' %}&nbsp;{% trans "available" %}{% else %}{% fa5_icon 'lock' 'fa' %} {% trans "not available" %}{% endif %}</span>
 	  <a href="{% url 'estateobjects:detail' object.id %}#bid"
 	     class="btn btn-sm {% if object.available %}btn-dark{% else %}btn-outline-secondary{% endif %} {% if not object.available %}disabled{% endif %}">{% trans "I'm interested" %}</a>
 	</li>
